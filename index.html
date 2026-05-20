@@ -92,8 +92,9 @@
 
         .projects-grid {
             display: flex;
-            flex-direction: column; /* جعل الكروت تحت بعض لتعطي مساحة مريحة للتصميم الأفقي */
+            flex-direction: row; 
             gap: 20px;
+            flex-wrap: wrap; 
         }
 
         .project-card {
@@ -102,17 +103,18 @@
             padding: 20px;
             border-radius: 8px;
             text-align: left;
+            flex: 1;
+            min-width: 250px; 
             box-sizing: border-box;
-            
-            /* تفعيل الفليكس لترتيب العناصر بشكل أفقي جنب بعض */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 25px;
         }
 
-        .project-text {
-            flex: 1; /* تجعل النصوص تأخذ كل المساحة المتاحة المتبقية */
+        /* حاوية مخصصة لترتيب اسم الكورس والباجة بجانب بعضهما */
+        .card-header-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
         }
 
         .project-card a {
@@ -120,8 +122,7 @@
             color: rgb(34, 195, 210);
             font-size: 1.1rem;
             text-decoration: none;
-            display: inline-block;
-            margin-bottom: 10px;
+            line-height: 1.3;
         }
 
         .project-card a:hover {
@@ -136,15 +137,21 @@
             margin: 0;
         }
 
-        /* حاوية صغيرة ومحكومة ومخصصة للباجة على اليمين */
+        /* تصغير حجم الحاوية المخصصة للباجة لتندمج بذكاء أعلى الكرت */
         .badge-box {
-            flex-shrink: 0; /* تمنع المتصفح من ضغط أو تصغير الباجة */
-            width: 150px;
-            height: 180px; /* طول مناسب جداً يمنع وجود الفراغات الزائدة للـ iframe */
+            flex-shrink: 0; 
+            width: 70px; /* تصغير العرض المخصص */
+            height: 70px; /* تصغير الارتفاع لتصبح ملمومة */
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+        }
+
+        /* تحجيم الـ iframe المجلوب من كريدلي ليناسب المساحة الصغيرة الجديدة */
+        .badge-box div {
+            transform: scale(0.45); /* عمل زووم تصغيري دقيق للباجة التفاعلية */
+            transform-origin: center;
         }
     </style>
 </head>
@@ -165,33 +172,33 @@
         <div class="projects-grid">
             
             <div class="project-card">
-                <div class="project-text">
+                <div class="card-header-area">
                     <a href="https://www.netacad.com/courses/python-essentials-1?courseLang=en-US">Python Essentials 1</a>
-                    <p>Python Essentials 1 teaches you foundational programming concepts, writing clean code, data types, logic, and core functions using Python syntax.</p>
+                    <div class="badge-box">
+                        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c3f3e52b-39d9-44a4-8e55-437603a5da7f" data-share-badge-host="https://www.credly.com"></div>
+                    </div>
                 </div>
-                <div class="badge-box">
-                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c3f3e52b-39d9-44a4-8e55-437603a5da7f" data-share-badge-host="https://www.credly.com"></div>
-                </div>
+                <p>Python Essentials 1 teaches you foundational programming concepts, writing clean code, data types, logic, and core functions using Python syntax.</p>
             </div>
 
             <div class="project-card">
-                <div class="project-text">
+                <div class="card-header-area">
                     <a href="https://www.netacad.com/courses/data-science-essentials-with-python?courseLang=en-US">Data Science Essentials With Python</a>
-                    <p>Python Essentials for Data Science teaches you data analysis, manipulation, statistics, and visualization using key libraries like Pandas and NumPy.</p>
+                    <div class="badge-box">
+                        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="85db6121-bd92-434f-b40b-78d107d89a8a" data-share-badge-host="https://www.credly.com"></div>
+                    </div>
                 </div>
-                <div class="badge-box">
-                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="85db6121-bd92-434f-b40b-78d107d89a8a" data-share-badge-host="https://www.credly.com"></div>
-                </div>
+                <p>Python Essentials for Data Science teaches you data analysis, manipulation, statistics, and visualization using key libraries like Pandas and NumPy.</p>
             </div>
 
             <div class="project-card">
-                <div class="project-text">
+                <div class="card-header-area">
                     <a href="https://www.netacad.com/courses/introduction-to-cybersecurity?courseLang=en-US">Introduction to Cybersecurity</a>
-                    <p>Introduction to Cybersecurity teaches you foundational concepts of network and data protection, identifying digital threats, and securing systems against cyberattacks.</p>
+                    <div class="badge-box">
+                        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a5ace8b6-26b4-42fe-a57b-ab3a7c7003cb" data-share-badge-host="https://www.credly.com"></div>
+                    </div>
                 </div>
-                <div class="badge-box">
-                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a5ace8b6-26b4-42fe-a57b-ab3a7c7003cb" data-share-badge-host="https://www.credly.com"></div>
-                </div>
+                <p>Introduction to Cybersecurity teaches you foundational concepts of network and data protection, identifying digital threats, and securing systems against cyberattacks.</p>
             </div>
 
         </div>
