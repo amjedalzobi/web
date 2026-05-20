@@ -23,7 +23,6 @@
             position: absolute;
             top: 15px;
             left: 15px;
-            
         }
 
         .main {
@@ -93,9 +92,8 @@
 
         .projects-grid {
             display: flex;
-            flex-direction: row;
+            flex-direction: column; /* جعل الكروت تحت بعض لتعطي مساحة مريحة للتصميم الأفقي */
             gap: 20px;
-            flex-wrap: wrap;
         }
 
         .project-card {
@@ -104,9 +102,17 @@
             padding: 20px;
             border-radius: 8px;
             text-align: left;
-            flex: 1;
-            min-width: 250px;
             box-sizing: border-box;
+            
+            /* تفعيل الفليكس لترتيب العناصر بشكل أفقي جنب بعض */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .project-text {
+            flex: 1; /* تجعل النصوص تأخذ كل المساحة المتاحة المتبقية */
         }
 
         .project-card a {
@@ -129,6 +135,17 @@
             line-height: 1.5;
             margin: 0;
         }
+
+        /* حاوية صغيرة ومحكومة ومخصصة للباجة على اليمين */
+        .badge-box {
+            flex-shrink: 0; /* تمنع المتصفح من ضغط أو تصغير الباجة */
+            width: 150px;
+            height: 180px; /* طول مناسب جداً يمنع وجود الفراغات الزائدة للـ iframe */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -138,7 +155,6 @@
     <div class="main">
         <h2>Hi I'm <span>Amjad</span></h2>
         <p class="mar">A Computer Science student passionate about building smart, efficient, and user-friendly web applications and software solutions.</p>
-        
     </div>
 
     <div class="projects-section">
@@ -149,30 +165,38 @@
         <div class="projects-grid">
             
             <div class="project-card">
-                <a href="https://www.credly.com/badges/c3f3e52b-39d9-44a4-8e55-437603a5da7f/public_url">Python Essentials 1</a>
-                <p>Python Essentials 1 teaches you foundational programming concepts, writing clean code, data types, logic, and core functions using Python syntax.</p>
-                <!-- باج Python Essentials 1 -->
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c3f3e52b-39d9-44a4-8e55-437603a5da7f" data-share-badge-host="https://www.credly.com"></div>
+                <div class="project-text">
+                    <a href="https://www.netacad.com/courses/python-essentials-1?courseLang=en-US">Python Essentials 1</a>
+                    <p>Python Essentials 1 teaches you foundational programming concepts, writing clean code, data types, logic, and core functions using Python syntax.</p>
+                </div>
+                <div class="badge-box">
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c3f3e52b-39d9-44a4-8e55-437603a5da7f" data-share-badge-host="https://www.credly.com"></div>
+                </div>
             </div>
 
             <div class="project-card">
-                <a href="https://www.credly.com/badges/85db6121-bd92-434f-b40b-78d107d89a8a/public_url">Data Science Essentials With Python</a>
-                <p>Python Essentials for Data Science teaches you data analysis, manipulation, statistics, and visualization using key libraries like Pandas and NumPy.</p>
-                <!-- باج Data Science Essentials -->
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="85db6121-bd92-434f-b40b-78d107d89a8a" data-share-badge-host="https://www.credly.com"></div>
+                <div class="project-text">
+                    <a href="https://www.netacad.com/courses/data-science-essentials-with-python?courseLang=en-US">Data Science Essentials With Python</a>
+                    <p>Python Essentials for Data Science teaches you data analysis, manipulation, statistics, and visualization using key libraries like Pandas and NumPy.</p>
+                </div>
+                <div class="badge-box">
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="85db6121-bd92-434f-b40b-78d107d89a8a" data-share-badge-host="https://www.credly.com"></div>
+                </div>
             </div>
 
             <div class="project-card">
-                <a href="https://www.credly.com/badges/a5ace8b6-26b4-42fe-a57b-ab3a7c7003cb/public_url">Introduction to Cybersecurity</a>
-                <p>Introduction to Cybersecurity teaches you foundational concepts of network and data protection, identifying digital threats, and securing systems against cyberattacks.</p>
-                <!-- باج Cybersecurity -->
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a5ace8b6-26b4-42fe-a57b-ab3a7c7003cb" data-share-badge-host="https://www.credly.com"></div>
+                <div class="project-text">
+                    <a href="https://www.netacad.com/courses/introduction-to-cybersecurity?courseLang=en-US">Introduction to Cybersecurity</a>
+                    <p>Introduction to Cybersecurity teaches you foundational concepts of network and data protection, identifying digital threats, and securing systems against cyberattacks.</p>
+                </div>
+                <div class="badge-box">
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a5ace8b6-26b4-42fe-a57b-ab3a7c7003cb" data-share-badge-host="https://www.credly.com"></div>
+                </div>
             </div>
 
         </div>
     </div>
 
-    <!-- تم إصلاح الرابط هنا بإضافة https: ليظهر على جهازك مباشرة -->
     <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 </body>
 </html>
