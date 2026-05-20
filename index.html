@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            background-color: rgb(255, 255, 255);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .img {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 700px;
+            padding: 0 20px; 
+            margin-top: 150px; 
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #334155;
+            font-size: 2.5rem;
+        }
+
+        h2 span {
+            font-family: 'Archivo Black', sans-serif;
+            color: rgb(34, 195, 210);
+            display: block; 
+            margin-top: 5px;
+        }
+
+        p.mar {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.6;
+            color: #475569;
+            margin-top: 20px; 
+            margin-bottom: 30px;
+        }
+
+        i.fa-user {
+            font-size: 32px;
+            color: #334155;
+            align-self: flex-start; 
+        }
+
+        .projects-section {
+            width: 100%;
+            max-width: 1000px;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .projects-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .projects-header i.fa-folder-open {
+            font-size: 1.8rem;
+            color: #334155;
+        }
+
+        .projects-section h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            color: #334155;
+            margin: 0;
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            flex: 1;
+            min-width: 250px;
+            box-sizing: border-box;
+        }
+
+        .project-card a {
+            font-family: 'Archivo Black', sans-serif;
+            color: rgb(34, 195, 210);
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        .project-card p {
+            font-family: 'Segoe UI', sans-serif;
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <img class="img" src="https://raw.githubusercontent.com/andybrewer/mvp/refs/heads/master/img/brand.png" alt="Logo">
+
+    <div class="main">
+        <h2>Hi I'm <span>Amjad</span></h2>
+        <p class="mar">A Computer Science student passionate about building smart, efficient, and user-friendly web applications and software solutions.</p>
+        
+    </div>
+
+    <div class="projects-section">
+        <div class="projects-header">
+            <i class="fa-solid fa-user"></i>
+            <h3>Recent Courses</h3>
+        </div>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <a href="https://www.credly.com/badges/c3f3e52b-39d9-44a4-8e55-437603a5da7f/public_url">Python Essentials 1</a>
+                <p>Python Essentials 1 teaches you foundational programming concepts, writing clean code, data types, logic, and core functions using Python syntax.</p>
+                <!-- باج Python Essentials 1 -->
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c3f3e52b-39d9-44a4-8e55-437603a5da7f" data-share-badge-host="https://www.credly.com"></div>
+            </div>
+
+            <div class="project-card">
+                <a href="https://www.credly.com/badges/85db6121-bd92-434f-b40b-78d107d89a8a/public_url">Data Science Essentials With Python</a>
+                <p>Python Essentials for Data Science teaches you data analysis, manipulation, statistics, and visualization using key libraries like Pandas and NumPy.</p>
+                <!-- باج Data Science Essentials -->
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="85db6121-bd92-434f-b40b-78d107d89a8a" data-share-badge-host="https://www.credly.com"></div>
+            </div>
+
+            <div class="project-card">
+                <a href="https://www.credly.com/badges/a5ace8b6-26b4-42fe-a57b-ab3a7c7003cb/public_url">Introduction to Cybersecurity</a>
+                <p>Introduction to Cybersecurity teaches you foundational concepts of network and data protection, identifying digital threats, and securing systems against cyberattacks.</p>
+                <!-- باج Cybersecurity -->
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a5ace8b6-26b4-42fe-a57b-ab3a7c7003cb" data-share-badge-host="https://www.credly.com"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- تم إصلاح الرابط هنا بإضافة https: ليظهر على جهازك مباشرة -->
+    <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+</body>
+</html>
