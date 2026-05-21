@@ -2,9 +2,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="HTML, amjad, Web Design">
-    <meta name="description" content="This website is about my skills.">
-
     <title>project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -14,18 +11,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> 
     
     <style>
-        
         body {
             font-family: 'Lato', Arial, sans-serif;
         }
 
-       
         h2, h3, h4 {
             font-family: 'Oswald', sans-serif;
             letter-spacing: 0.5px;
         }
 
-        .course-card {
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        
+        .animated-section {
+            opacity: 0; 
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        
+        .intro {
+            animation-delay: 0.1s;
+        }
+
+        
+        .anim-cards {
+            animation-delay: 0.2s;
+        }
+
+       
+        .anim-rest {
+            animation-delay: 0.3s;
+        }
+
+        .course {
             background-color: #f8fafc; 
             border: 1px solid #e2e8f0; 
             padding: 15px; 
@@ -40,68 +68,70 @@
             transition: all 0.3s ease;
         }
         
-        .course-card:hover {
+        .course:hover {
             top: -8px;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 5px;
         }
 
-        .course-info {
-            flex: 1;
-        }
+       
     </style>
 </head>
 <body style="text-align: center; margin: 0; padding: 20px;">
     <a href="https://amjedalzobi.github.io/web/">
     <img src="https://raw.githubusercontent.com/andybrewer/mvp/refs/heads/master/img/brand.png" alt="Logo" style="float: left; -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.15)));">
     </a>
-    <br style="clear: both;">
+    <br>
 
-    <div style="margin-top: 50px; margin-bottom: 40px;">
-        <h2 style="font-size: 38px; color: #334155;">Hi I'm <span style="color: rgb(34, 195, 210);">Amjad</span></h2>
-        <p style="font-size: 18px; color: #475569; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-            A Computer Science student passionate about building smart, efficient, and user-friendly web applications and software solutions.
-        </p>
+    
+    <div class="animated-section intro">
+        <div style="margin-top: 50px; margin-bottom: 40px;">
+            <h2 style="font-size: 38px; color: #334155;">Hi I'm <span style="color: rgb(34, 195, 210);">Amjad</span></h2>
+            <p style="font-size: 18px; color: #475569; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                A Computer Science student passionate about building smart, efficient, and user-friendly web applications and software solutions.
+            </p>
+        </div>
+
+        <div style="max-width: 600px; margin: 0 auto 40px auto; text-align: left; background-color: #f8fafc; padding: 15px 20px; border-radius: 5px;">
+            <h4 style="color: #334155; margin: 0 0 10px 0; font-size: 19px;">Current Focus & Interests</h4>
+            <ul style="color: #475569; font-size: 15px; line-height: 1.8; padding-left: 20px; margin: 0;">
+                <li>Building Full-Stack Web Applications & Interactive UI.</li>
+                <li>Exploring Advanced Data Science and Analytics.</li>
+                <li>Practicing Object-Oriented Design & Clean Code Principles.</li>
+            </ul>
+        </div>
     </div>
 
-    <div style="max-width: 600px; margin: 0 auto 40px auto; text-align: left; background-color: #f8fafc; padding: 15px 20px; border-radius: 5px;">
-        <h4 style="color: #334155; margin: 0 0 10px 0; font-size: 19px;">Current Focus & Interests</h4>
-        <ul style="color: #475569; font-size: 15px; line-height: 1.8; padding-left: 20px; margin: 0;">
-            <li>Building Full-Stack Web Applications & Interactive UI.</li>
-            <li>Exploring Advanced Data Science and Analytics.</li>
-            <li>Practicing Object-Oriented Design & Clean Code Principles.</li>
-        </ul>
-    </div>
-
-    <div style="max-width: 650px; margin: 0 auto; text-align: left; margin-bottom: 40px;">
+    
+    <div class="animated-section anim-cards" style="max-width: 650px; margin: 0 auto; text-align: left; margin-bottom: 40px;">
         <h3 style="font-size: 26px; color: #334155;"><i class="fa-solid fa-user" style="margin-right: 8px;"></i> Recent Courses</h3>
         
-       
         
-<div class="course-card">
-            <div class="course-info">
-                <a href="https://www.netacad.com/courses/python-essentials-1?courseLang=en-US" style="color: rgb(34, 195, 210); font-weight: bold; text-decoration: none; font-size: 18px;">Python Essentials 1</a>
-                <p style="color: #475569; font-size: 14px; margin: 8px 0 0 0;">Python Essentials 1 teaches you foundational programming concepts, writing clean code, data types, logic, and core functions using Python syntax.</p>
+        <div class="course">
+            <div>
+                <a href="https://www.netacad.com/courses/introduction-to-cybersecurity?courseLang=en-US" style="color: rgb(34, 195, 210); font-weight: bold; text-decoration: none; font-size: 18px;">Introduction to Cybersecurity</a>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0 0;">Introduction to Cybersecurity teaches you foundational concepts of network and data protection, identifying digital threats, and securing systems against cyberattacks.</p>
             </div>
             <div>
                 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c3f3e52b-39d9-44a4-8e55-437603a5da7f" data-share-badge-host="https://www.credly.com"></div>
             </div>
         </div>
-       
+
         
-<div class="course-card">
-            <div class="course-info">
-                <a href="https://www.netacad.com/courses/data-science-essentials-with-python?courseLang=en-US" style="color: rgb(34, 195, 210); font-weight: bold; text-decoration: none; font-size: 18px;">Data Science Essentials With Python</a>
-                <p style="color: #475569; font-size: 14px; margin: 8px 0 0 0;">Python Essentials for Data Science teaches you data analysis, manipulation, statistics, and visualization using key libraries like Pandas and NumPy.</p>
+        <div class="course">
+            <div>
+                <a href="https://www.netacad.com/courses/python-essentials-1?courseLang=en-US" style="color: rgb(34, 195, 210); font-weight: bold; text-decoration: none; font-size: 18px;">Python Essentials 1</a>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0 0;">Python Essentials 1 teaches you foundational programming concepts, writing clean code, data types, logic, and core functions using Python syntax.</p>
             </div>
             <div>
                 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="85db6121-bd92-434f-b40b-78d107d89a8a" data-share-badge-host="https://www.credly.com"></div>
             </div>
         </div>
-                
-        <div class="course-card">
-            <div class="course-info">
-                <a href="https://www.netacad.com/courses/introduction-to-cybersecurity?courseLang=en-US" style="color: rgb(34, 195, 210); font-weight: bold; text-decoration: none; font-size: 18px;">Introduction to Cybersecurity</a>
-                <p style="color: #475569; font-size: 14px; margin: 8px 0 0 0;">Introduction to Cybersecurity teaches you foundational concepts of network and data protection, identifying digital threats, and securing systems against cyberattacks.</p>
+
+       
+        <div class="course">
+            <div>
+                <a href="https://www.netacad.com/courses/data-science-essentials-with-python?courseLang=en-US" style="color: rgb(34, 195, 210); font-weight: bold; text-decoration: none; font-size: 18px;">Data Science Essentials With Python</a>
+                <p style="color: #475569; font-size: 14px; margin: 8px 0 0 0;">Python Essentials for Data Science teaches you data analysis, manipulation, statistics, and visualization using key libraries like Pandas and NumPy.</p>
             </div>
             <div>
                 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a5ace8b6-26b4-42fe-a57b-ab3a7c7003cb" data-share-badge-host="https://www.credly.com"></div>
@@ -109,66 +139,69 @@
         </div>
     </div>
 
-    <div style="max-width: 600px; margin: 0 auto; text-align: left; margin-bottom: 40px;">
-        <h3 style="font-size: 24px; color: #334155;"><i class="fa-solid fa-code" style="margin-right: 8px;"></i> Technical Skills</h3>
+   
+    <div class="animated-section anim-rest">
+        <div style="max-width: 600px; margin: 0 auto; text-align: left; margin-bottom: 40px;">
+            <h3 style="font-size: 24px; color: #334155;"><i class="fa-solid fa-code" style="margin-right: 8px;"></i> Technical Skills</h3>
+            
+            <table border="1" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                <tr style="background-color: #f1f5f9;">
+                    <td style="padding: 10px; font-weight: bold; color: #334155;">Skill</td>
+                    <td style="padding: 10px; font-weight: bold; color: #334155;">Core Technologies and Concepts</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; color: #475569;">Programming Languages</td>
+                    <td style="padding: 10px; color: #475569;">Python, Object-Oriented Programming (OOP)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; color: #475569;">Data Science</td>
+                    <td style="padding: 10px; color: #475569;">Data Analysis, Manipulation (Pandas, NumPy), Visualization</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; color: #475569;">Security & Web</td>
+                    <td style="padding: 10px; color: #475569;">Network Protection, Cyber Threats, Responsive HTML/CSS</td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="max-width: 600px; margin: 0 auto; text-align: left; margin-bottom: 40px;">
+            <h3 style="font-size: 24px; color: #334155;"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Get In Touch</h3>
+            
+            <form action="#" method="POST" style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 5px;">
+                <input type="text" placeholder="Your Name" required style="width: 95%; padding: 10px; margin-bottom: 10px;">
+                <br>
+                <input type="email" placeholder="Your Email" required style="width: 95%; padding: 10px; margin-bottom: 10px;">
+                <br>
+                <textarea placeholder="Your Message" rows="5" required style="width: 95%; padding: 10px; margin-bottom: 10px;"></textarea>
+                <br>
+                <button type="submit" style="background-color: rgb(34, 195, 210); color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; width: 100%;">Send Message</button>
+            </form>
+        </div>
         
-        <table border="1" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
-            <tr style="background-color: #f1f5f9;">
-                <td style="padding: 10px; font-weight: bold; color: #334155;">Skill</td>
-                <td style="padding: 10px; font-weight: bold; color: #334155;">Core Technologies and Concepts</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px; color: #475569;">Programming Languages</td>
-                <td style="padding: 10px; color: #475569;">Python, Object-Oriented Programming (OOP)</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px; color: #475569;">Data Science</td>
-                <td style="padding: 10px; color: #475569;">Data Analysis, Manipulation (Pandas, NumPy), Visualization</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px; color: #475569;">Security & Web</td>
-                <td style="padding: 10px; color: #475569;">Network Protection, Cyber Threats, Responsive HTML/CSS</td>
-            </tr>
-        </table>
+        <hr style="width: 100%; max-width: 600px; border: 0; border-top: 1px solid #e2e8f0; margin: 20px auto;">
+
+        <div style="max-width: 600px; margin: 0 auto; text-align: left; padding-bottom: 40px; color: #475569; font-size: 15px; display: flex; justify-content: space-between; align-items: center;">
+            
+            <span>
+                Contact me via email: <a href="mailto:amjedalzobi@gmail.com" style="color: rgb(34, 195, 210); text-decoration: none; font-weight: bold;">amjedalzobi@gmail.com</a>
+            </span>
+            
+            <ul style=" margin: 0; padding: 0; ">
+                <li style="display: inline; margin-right: 15px;">
+                    <a href="https://www.instagram.com/" style="color: #475569; font-size: 20px; text-decoration: none;">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li style="display: inline;">
+                    <a href="https://twitter.com/" style="color: #475569; font-size: 20px; text-decoration: none;" ">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <div style="max-width: 600px; margin: 0 auto; text-align: left; margin-bottom: 40px;">
-        <h3 style="font-size: 24px; color: #334155;"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Get In Touch</h3>
-        
-        <form action="#" method="POST" style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 5px;">
-            <input type="text" placeholder="Your Name" required style="width: 95%; padding: 10px; margin-bottom: 10px;">
-            <br>
-            <input type="email" placeholder="Your Email" required style="width: 95%; padding: 10px; margin-bottom: 10px;">
-            <br>
-            <textarea placeholder="Your Message" rows="5" required style="width: 95%; padding: 10px; margin-bottom: 10px;"></textarea>
-            <br>
-            <button type="submit" style="background-color: rgb(34, 195, 210); color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; width: 100%;">Send Message</button>
-        </form>
-    </div>
-
-    <hr style="width: 100%; max-width: 600px; border: 0; border-top: 1px solid #e2e8f0; margin: 20px auto;">
-
-    <div style="max-width: 600px; margin: 0 auto; text-align: left; padding-bottom: 40px; color: #475569; font-size: 15px; display: flex; justify-content: space-between; align-items: center;">
-        
-        <span>
-            Contact me via email: <a href="mailto:amjedalzobi@gmail.com" style="color: rgb(34, 195, 210); text-decoration: none; font-weight: bold;">amjedalzobi@gmail.com</a>
-        </span>
-        
-        <ul style="display: inline-block; list-style: none; margin: 0; padding: 0; vertical-align: middle;">
-            <li style="display: inline; margin-right: 15px;">
-                <a href="https://www.instagram.com/" style="color: #475569; font-size: 20px; text-decoration: none;" onmouseover="this.style.color='rgb(34, 195, 210)'" onmouseout="this.style.color='#475569'">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </li>
-            <li style="display: inline;">
-                <a href="https://twitter.com/" style="color: #475569; font-size: 20px; text-decoration: none;" onmouseover="this.style.color='rgb(34, 195, 210)'" onmouseout="this.style.color='#475569'">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    
+   
     <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 </body>
 </html>
